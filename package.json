@@ -1,0 +1,28 @@
+{
+  "name": "http-requests-aggregator",
+  "version": "0.0.1",
+  "description": "Makes several http-requests like one go.",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "mocha"
+  },
+  "engines": {
+    "node": ">=6.14.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strafe89/debitoor.git"
+  },
+  "devDependencies": {
+    "babel-eslint": "7.2.3",
+    "dummy-json": "2.0.0",
+    "eslint": "3.19.0",
+    "eslint-config-react": "1.1.7",
+    "eslint-plugin-import": "2.3.0",
+    "eslint-plugin-react": "7.1.0",
+    "express": "4.15.3",
+    "mocha": "3.4.2",
+    "supertest": "3.0.0"
+  }
+}
