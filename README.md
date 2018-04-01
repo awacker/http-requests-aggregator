@@ -1,12 +1,12 @@
 ### Description
 Aggregator of several http-requests. As result, we can get info from several requests in one go.
 ### Usage
-```bashp
+```
 npm install http-requests-aggregator
 ```
 then add endpoint in your application
-```js
-app.get('/api/resources', require('http-requests-aggregator'));
+```
+app.use('/api/resources', require('http-requests-aggregator'));
 ```
 Example of final use
 
