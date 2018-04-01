@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "Makes several http-requests like one go.",
   "main": "index.js",
-  "private": true,
+  "author": "awacker",
+  "license": "ISC",
   "scripts": {
     "test": "mocha"
   },
@@ -12,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/strafe89/debitoor.git"
+    "url": "git+https://github.com/awacker/http-requests-aggregator.git"
   },
   "devDependencies": {
     "babel-eslint": "7.2.3",

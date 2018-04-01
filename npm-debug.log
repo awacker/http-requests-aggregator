@@ -1,0 +1,82 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node@6/6.14.1/bin/node',
+1 verbose cli   '/usr/local/opt/node@6/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@3.10.10
+3 info using node@v6.14.1
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/awacker/work/jstest/http-requests-aggregator',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/awacker/.npm/http-requests-aggregator/0.0.1/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/awacker/.npm correctMkdir not in flight; initializing
+10 info lifecycle http-requests-aggregator@0.0.1~prepublish: http-requests-aggregator@0.0.1
+11 silly lifecycle http-requests-aggregator@0.0.1~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/awacker/.npm/http-requests-aggregator/0.0.1/package.tgz',
+12 verbose tar pack   '/Users/awacker/work/jstest/http-requests-aggregator' ]
+13 verbose tarball /Users/awacker/.npm/http-requests-aggregator/0.0.1/package.tgz
+14 verbose folder /Users/awacker/work/jstest/http-requests-aggregator
+15 verbose addLocalTarball adding from inside cache /Users/awacker/.npm/http-requests-aggregator/0.0.1/package.tgz
+16 verbose correctMkdir /Users/awacker/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd http-requests-aggregator@0.0.1
+18 verbose afterAdd /Users/awacker/.npm/http-requests-aggregator/0.0.1/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/awacker/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/awacker/.npm/http-requests-aggregator/0.0.1/package/package.json written
+21 silly publish { name: 'http-requests-aggregator',
+21 silly publish   version: '0.0.1',
+21 silly publish   description: 'Makes several http-requests like one go.',
+21 silly publish   main: 'index.js',
+21 silly publish   private: true,
+21 silly publish   scripts: { test: 'mocha' },
+21 silly publish   engines: { node: '>=6.14.1' },
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/strafe89/debitoor.git' },
+21 silly publish   devDependencies:
+21 silly publish    { 'babel-eslint': '7.2.3',
+21 silly publish      'dummy-json': '2.0.0',
+21 silly publish      eslint: '3.19.0',
+21 silly publish      'eslint-config-react': '1.1.7',
+21 silly publish      'eslint-plugin-import': '2.3.0',
+21 silly publish      'eslint-plugin-react': '7.1.0',
+21 silly publish      express: '4.15.3',
+21 silly publish      mocha: '3.4.2',
+21 silly publish      supertest: '3.0.0' },
+21 silly publish   readme: '### Description\nAggregator of several http-requests. As result, we can get info from several requests in one go.\n### Usage\n```bashp\nnpm install http-requests-aggregator\n```\nthen add endpoint in your application\n```js\napp.get(\'/api/resources\', require(\'http-requests-aggregator\'));\n```\nExample of final use\n\nGET api/resources ? users=api/users & customer=api/customers/5abfaa03219765467a7e8b52 & countries=api/countries ..\n\nreturns {users: [..], customer: {..}, countries: [..] }\n\n### Prerequisites\nNode.js v6.14 or later needed.\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: 'fb7c7ee413e040be681e6b5224f520eb3acc1271',
+21 silly publish   bugs: { url: 'https://github.com/strafe89/debitoor/issues' },
+21 silly publish   homepage: 'https://github.com/strafe89/debitoor#readme',
+21 silly publish   _id: 'http-requests-aggregator@0.0.1',
+21 silly publish   _shasum: '731b6130bfa250dcdbe4691a1d63bead55e033f9',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 verbose stack Error: This package has been marked as private
+23 verbose stack Remove the 'private' field from the package.json to publish it.
+23 verbose stack     at publish_ (/usr/local/Cellar/node@6/6.14.1/lib/node_modules/npm/lib/publish.js:101:15)
+23 verbose stack     at Array.<anonymous> (/usr/local/Cellar/node@6/6.14.1/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+23 verbose stack     at LOOP (/usr/local/Cellar/node@6/6.14.1/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
+23 verbose stack     at LOOP (/usr/local/Cellar/node@6/6.14.1/lib/node_modules/npm/node_modules/slide/lib/chain.js:14:28)
+23 verbose stack     at chain (/usr/local/Cellar/node@6/6.14.1/lib/node_modules/npm/node_modules/slide/lib/chain.js:20:5)
+23 verbose stack     at /usr/local/Cellar/node@6/6.14.1/lib/node_modules/npm/lib/publish.js:73:5
+23 verbose stack     at RES (/usr/local/Cellar/node@6/6.14.1/lib/node_modules/npm/node_modules/inflight/inflight.js:23:14)
+23 verbose stack     at f (/usr/local/Cellar/node@6/6.14.1/lib/node_modules/npm/node_modules/once/once.js:25:25)
+23 verbose stack     at /usr/local/Cellar/node@6/6.14.1/lib/node_modules/npm/lib/cache.js:363:16
+23 verbose stack     at /usr/local/Cellar/node@6/6.14.1/lib/node_modules/npm/node_modules/write-file-atomic/index.js:50:11
+24 verbose cwd /Users/awacker/work/jstest/http-requests-aggregator
+25 error Darwin 17.4.0
+26 error argv "/usr/local/Cellar/node@6/6.14.1/bin/node" "/usr/local/opt/node@6/bin/npm" "publish"
+27 error node v6.14.1
+28 error npm  v3.10.10
+29 error This package has been marked as private
+29 error Remove the 'private' field from the package.json to publish it.
+30 error If you need help, you may report this error at:
+30 error     <https://github.com/npm/npm/issues>
+31 verbose exit [ 1, true ]
