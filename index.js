@@ -1,3 +1,5 @@
+'use strict'
+
 const http = require('http');
 
 module.exports = (req, res, next) => {
@@ -16,8 +18,8 @@ module.exports = (req, res, next) => {
   const checkResponse = r => r.statusCode === 200 && r.headers['content-type'].indexOf('application/json') !== -1;
 
   const runRequest = (param, path) => {
-    return new Promise(resolve=>{
-      http.get(Object.assign({}, options, {path: `/${path}`}), response => {
+    return new Promise(resolve => {
+      http.get({...options, ...{path: `/${path}`}}, response => {
         if (!checkResponse(response)) return resolve(`{"${param}":"Something wrong!"}`);
         firstScrapExist ? res.write(`,`) : firstScrapExist = true;
         res.write(`"${param}":`);
@@ -29,13 +31,13 @@ module.exports = (req, res, next) => {
   };
 
   const errorsPack = e => {
-    let errors = e.filter(item=>item);
+    let errors = e.filter(item => item);
     if (errors.length == 0) return;
     if (firstScrapExist) res.write(`,`);
     res.write(`"errors":[${errors.join(",")}]`);
   }
 
-  Promise.all(Object.keys(req.query).map(param=>runRequest(param, req.query[param])))
+  Promise.all(Object.keys(req.query).map(param => runRequest(param, req.query[param])))
   .then((e) => {
     errorsPack(e);
     res.write('}');

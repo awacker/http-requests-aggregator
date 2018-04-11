@@ -4,7 +4,7 @@ Aggregator of several http-requests. As result, we can get info from several req
 ```
 npm install http-requests-aggregator
 ```
-then add endpoint in your application
+then add endpoint in your Express application
 ```
 app.use('/api/resources', require('http-requests-aggregator'));
 ```
