@@ -15,4 +15,4 @@ GET api/resources ? users=api/users & customer=api/customers/5abfaa03219765467a7
 returns {users: [..], customer: {..}, countries: [..] }
 
 ### Prerequisites
-Node.js v6.14 or later needed.
+Node.js v8.0.0 or later needed.
