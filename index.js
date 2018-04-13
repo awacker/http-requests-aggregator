@@ -20,7 +20,7 @@ module.exports = (req, res, next) => {
   const runRequest = (param, path) => {
     return new Promise(resolve => {
       http.get({...options, ...{path: `/${path}`}}, response => {
-        if (!checkResponse(response)) return resolve(`{"${param}":"Something wrong!"}`);
+        if (!checkResponse(response)) return resolve(`{"${param}":{statusCode: ${response.statusCode}, statusMessage: "${response.statusMessage}"}}`);
         firstScrapExist ? res.write(`,`) : firstScrapExist = true;
         res.write(`"${param}":`);
         response.on('data', scrap => res.write(scrap));
