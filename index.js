@@ -15,7 +15,7 @@ module.exports = (req, res, next) => {
   res.write('{');
   var firstScrapExist = false;
 
-  const checkResponse = r => r.statusCode === 200 && r.headers['content-type'].indexOf('application/json') !== -1;
+  const checkResponse = r => r.statusCode === 200 && r.headers['content-type'].includes('application/json');
 
   const runRequest = (param, path) => {
     return new Promise(resolve => {
