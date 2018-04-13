@@ -1,6 +1,6 @@
 {
   "name": "http-requests-aggregator",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Makes several http-requests like one go.",
   "main": "index.js",
   "author": "awacker",
